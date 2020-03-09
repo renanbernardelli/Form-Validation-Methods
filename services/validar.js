@@ -2,14 +2,12 @@ import { validarDataNascimento } from "./validaDataNascimento.js";
 import { retornarMensagemDeErro } from "./mensagensErro.js"
 
 export const validarInput = (input, adicionarErro = true) => {
-
     
     const classeElementoErro = 'erro-validacao';
     
     const elementoPai = input.parentNode;
-    const elementoErroExiste = elementoPai.querySelector(`${classeElementoErro}`);
+    const elementoErroExiste = elementoPai.querySelector(`.${classeElementoErro}`);
     const elementoErro = elementoErroExiste || document.createElement("div");
-    
     
     const classeInputErro = 'possui-erro-validacao';
     

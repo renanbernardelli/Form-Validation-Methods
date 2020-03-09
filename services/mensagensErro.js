@@ -2,13 +2,13 @@ export const retornarMensagemDeErro = (tipo, validity) => {
 
     let mensagemDeErro = '';
 
-    const tiposDeErro = ['valueMissing', 'typeMisMatch', 'tooShort', 'rangeUnderflow', 'customError'];
+    const tiposDeErro = ['valueMissing', 'typeMismatch', 'tooShort', 'rangeUnderflow', 'customError'];
 
     const mensagensDeErro = {
 
         email: {
             valueMissing: 'O email é necessário',
-            typeMisMatch: 'Este email não é válido'
+            typeMismatch: 'Este email não é válido'
         },
 
         senha: {
