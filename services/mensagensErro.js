@@ -2,7 +2,7 @@ export const retornarMensagemDeErro = (tipo, validity) => {
 
     let mensagemDeErro = '';
 
-    const tiposDeErro = ['valueMissing', 'typeMismatch', 'tooShort', 'rangeUnderflow', 'customError'];
+    const tiposDeErro = ['valueMissing', 'typeMismatch', 'tooShort', 'rangeUnderflow', 'customError', 'patternMismatch'];
 
     const mensagensDeErro = {
 
@@ -22,7 +22,8 @@ export const retornarMensagemDeErro = (tipo, validity) => {
         },
 
         cpf: {
-            valueMissing: 'O CPF é necessário'
+            valueMissing: 'O CPF é necessário',
+            customError: 'Este não é um CPF válido'
         },
 
         rg: {
@@ -30,7 +31,10 @@ export const retornarMensagemDeErro = (tipo, validity) => {
         },
 
         cep: {
-            valueMissing: 'O CEP é necessário'
+            valueMissing: 'O CEP é necessário',
+            patternMismatch: 'Este não é um CEP válido',
+            customError: 'Este não é um CEP válido'
+
         },
 
         logradouro: {
