@@ -47,6 +47,15 @@ export const retornarMensagemDeErro = (tipo, validity) => {
 
         estado: {
             valueMissing: 'O estado é necessário'
+        },
+
+        preco: {
+            valueMissing: 'O preço é necessário',
+            customError: 'O valor deve ser maior que R$ 0,00'
+        },
+
+        nomeProduto: {
+            valueMissing: 'O nome do produto é necessário'
         }
     };
 

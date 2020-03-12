@@ -2,6 +2,8 @@ import { validarDataNascimento } from "./validaDataNascimento.js";
 import { retornarMensagemDeErro } from "./mensagensErro.js";
 import { validarCPF } from "./validarCPF.js";
 import { recuperarEndereco } from "./recuperarEndereco.js"
+import { validarPreco } from "./validarPreco.js"
+
 
 export const validarInput = (input, adicionarErro = true) => {
     
@@ -19,7 +21,8 @@ export const validarInput = (input, adicionarErro = true) => {
     const validadoresEspecificos = {
         dataNascimento: input => validarDataNascimento(input),
         cpf: input => validarCPF(input),
-        cep: input => recuperarEndereco(input)
+        cep: input => recuperarEndereco(input),
+        preco: input => validarPreco(input)
     };
 
     if (validadoresEspecificos[tipo]) {
